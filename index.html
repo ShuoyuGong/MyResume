@@ -834,7 +834,7 @@
         var bgm = document.getElementById("bgm");
         Icon_Music.addEventListener("click", function(){
             var boolean = Icon_Music.style.animationPlayState
-            if(boolean == "running"){
+            if(boolean !== "running"){
                 Icon_Music.style.animationPlayState="paused";
                 bgm.pause();
             }else{
