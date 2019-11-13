@@ -51,7 +51,7 @@
 </head>
 <body>
     <!-- 音乐文件和图标 -->
-    <audio src="img/bgm.mp3" autoplay = "autoplay" loop = "loop" id="bgm"></audio>
+    <audio src="img/bgm.mp3" loop = "loop" id="bgm"></audio>
     <img src="img/music.png" style="width: 8%;position: fixed;z-index: 2;margin-left: 85%;margin-top: 5%;" id="Icon_Music">
     <!-- 音乐文件和图标 -->
         <div class="swiper-container">
@@ -832,9 +832,10 @@
         // 就绪函数开始
         var Icon_Music = document.getElementById("Icon_Music");
         var bgm = document.getElementById("bgm");
+        bgm.play();
         Icon_Music.addEventListener("click", function(){
             var boolean = Icon_Music.style.animationPlayState
-            if(boolean !== "running"){
+            if(boolean == "running"){
                 Icon_Music.style.animationPlayState="paused";
                 bgm.pause();
             }else{
